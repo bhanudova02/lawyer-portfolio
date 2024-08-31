@@ -6,7 +6,7 @@ export default function Header() {
     const [logo, setLogo] = useState("/white_logo.png")
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 20) {
+            if (window.scrollY > 200) {
                 setIsScrolled(true);
                 setLogo("logo.png")
             } else {

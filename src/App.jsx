@@ -2,10 +2,10 @@ import { useEffect } from 'react';
 import './App.css'
 import Experience from './components/Experience'
 import Header from './components/Header'
-import { Slider } from './components/Slider'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Carousel } from './components/Carousel';
 
 function App() {
   useEffect(() => {
@@ -24,7 +24,7 @@ function App() {
   return (
     <main>
       <Header />
-      <Slider />
+      <Carousel />
       <div className="mt-8 w-[90%] md:w-[80%] lg:max-w-6xl mx-auto space-y-10">
         <Experience />
         <div>
