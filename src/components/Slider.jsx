@@ -12,7 +12,7 @@ export function Slider() {
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
                                 <div className="w-[19.5rem] md:w-[35rem] lg:w-[50rem] ">
                                     <h3 className="text-white font-bold text-lg md:text-2xl">{data.title}</h3>
-                                    <p className="text-white text-3xl md:text-5xl font-bold mt-2">{data.description}</p>
+                                    <p className="text-white text-3xl md:text-7xl font-bold mt-2">{data.description}</p>
                                 </div>
                             </div>
                         </div>
