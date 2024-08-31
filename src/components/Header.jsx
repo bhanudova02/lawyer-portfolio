@@ -2,13 +2,15 @@ import { useState, useEffect } from 'react';
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
-
+    const [logo,setLogo] = useState("/white_logo.png")
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 20) {
                 setIsScrolled(true);
+                setLogo("logo.png")
             } else {
                 setIsScrolled(false);
+                setLogo("white_logo.png")
             }
         };
 
@@ -22,7 +24,7 @@ export default function Header() {
         >
             <div className='flex justify-between'>
                 <div>
-                    <img src="/logo.png" alt="Logo" className="w-52 h-auto" />
+                    <img src={logo} alt="Logo" className="w-52 h-auto" />
                 </div>
                 <ul className="hidden md:flex items-center gap-8 font-semibold">
                     <li>About</li>
