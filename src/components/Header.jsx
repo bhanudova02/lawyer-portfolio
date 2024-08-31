@@ -24,7 +24,7 @@ export default function Header() {
         >
             <div className='flex justify-between'>
                 <div>
-                    <img src={logo} alt="Logo" className="w-52 h-auto" />
+                    <img src={logo} alt="Logo" className="w-48 md:w-52 h-auto" />
                 </div>
                 <ul className="hidden md:flex items-center gap-8 font-semibold">
                     <li>About</li>
