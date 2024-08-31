@@ -7,7 +7,7 @@ export default function Experience() {
                 </div>
                 <div className="w-full lg:w-[60%] relative">
                     <div className="bg-white w-fit p-4 rounded-xl ms-0 lg:-ms-40 mt-4 " >
-                        <h2 className="text-4xl font-bold text-teal-800">16 Years Experience</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-teal-800">16 Years Experience</h2>
                     </div>
                     <div className="lg:absolute bottom-0 px-2 lg:px-6">
                         <h6 className="font-semibold text-2xl">Learn About Us</h6>
