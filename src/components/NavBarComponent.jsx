@@ -39,7 +39,7 @@ export function NavBarComponent() {
                     </div>
 
                     <button onClick={() => handleToggleMenu(false)} className="absolute right-4 top-6">
-                        <RiCloseCircleFill className="text-3xl text-white" />
+                        <RiCloseCircleFill className="text-3xl text-white/80" />
                     </button>
                     {/* <div className="flex flex-col justify-between items-center h-full p-6">
                        
