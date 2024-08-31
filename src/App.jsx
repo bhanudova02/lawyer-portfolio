@@ -3,6 +3,9 @@ import Experience from './components/Experience'
 import Header from './components/Header'
 
 import { Carousel } from './components/Carousel';
+import { ContactUs } from './components/ContactUs';
+import { Example } from './components/Example';
+import { Footer } from './components/Footer';
 
 function App() {
 
@@ -11,12 +14,10 @@ function App() {
     <main>
       <Header />
       <Carousel />
-      <div className="mt-8 w-[90%] md:w-[80%] lg:max-w-6xl mx-auto space-y-10">
-        <Experience />
-        <div>
-
-        </div>
-      </div>
+      <Experience />
+      <Example />
+      <ContactUs />
+      <Footer />
     </main>
   )
 }
