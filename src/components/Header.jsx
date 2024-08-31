@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
+import { NavBarComponent } from './NavBarComponent';
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
-    const [logo,setLogo] = useState("/white_logo.png")
+    const [logo, setLogo] = useState("/white_logo.png")
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 20) {
@@ -32,6 +33,7 @@ export default function Header() {
                     <li>Feedback</li>
                     <li>Contact Us</li>
                 </ul>
+                <NavBarComponent />
             </div>
         </header>
     );
