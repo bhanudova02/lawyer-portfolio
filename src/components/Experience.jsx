@@ -7,10 +7,10 @@ export default function Experience() {
                         <img src="about.jpg" alt="AboutUs" className="rounded-md h-full w-full lg-absolute top-0 left-0 object-cover" />
                     </div>
                     <div className="w-full lg:w-[60%] relative">
-                        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom"  data-aos-delay="200" className="bg-white w-fit p-4 rounded-xl ms-0 lg:-ms-40 mt-4" >
+                        <div data-aos="fade-up" data-aos-delay="200" className="bg-white w-fit p-4 rounded-xl ms-0 lg:-ms-40 mt-4" >
                             <h2 className="text-3xl md:text-4xl font-bold text-teal-800">16 Years Experience</h2>
                         </div>
-                        <div data-aos="zoom-in" className="px-2 lg:px-6 mt-0 lg:mt-8">
+                        <div data-aos="zoom-in"  data-aos-delay="400" className="px-2 lg:px-6 mt-0 lg:mt-8">
                             <div>
                                 <h6 className="font-semibold text-2xl" >Learn About Us</h6>
                                 <h2 className="text-3xl md:text-5xl font-bold mt-1">We Provide Reliable And Effective Legal Services</h2>
