@@ -33,7 +33,9 @@ export default function Header() {
                     <li>Feedback</li>
                     <li>Contact Us</li>
                 </ul>
-                <NavBarComponent />
+                <div className='md:hidden block'>
+                    <NavBarComponent />
+                </div>
             </div>
         </header>
     );

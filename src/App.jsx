@@ -11,6 +11,7 @@ import { Services } from './components/Services';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { WhatsApp } from './components/WhatsApp';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
     <main>
       <Header />
       <Carousel />
+      <WhatsApp/>
       <Experience />
       <WhyChooseUs />
       <Services />

@@ -3,7 +3,7 @@ import { FaBriefcase, FaShieldAlt, FaRegHandshake } from 'react-icons/fa';
 
 export function Carousel() {
     return (
-        <div className="relative w-full h-[80vh] md:h-[60vh] lg:h-screen overflow-hidden">
+        <div className="relative w-full h-[90vh] md:h-[80vh] lg:h-screen overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-[#101212] to-[#08201D]">
                 {/* Uncomment the image if you need it instead of video */}
                 <img src="/home_banner1.jpg" className="absolute inset-0 w-full h-full object-cover opacity-30" />
@@ -38,7 +38,7 @@ export function Carousel() {
                                 </button>
                             </div>
 
-                            <div   className="grid grid-cols-1 gap-4 mt-8 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 md:gap-8">
+                            <div className="grid grid-cols-1 gap-4 mt-8 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 md:gap-8">
                                 <div data-aos="fade-right" data-aos-delay="50" className="flex items-center justify-center text-left">
                                     <FaBriefcase className="text-green-400 w-6 h-6 sm:w-8 sm:h-8" />
                                     <p className="ml-2 text-xs text-white sm:text-sm md:text-base">

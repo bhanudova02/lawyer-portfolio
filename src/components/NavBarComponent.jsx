@@ -18,7 +18,7 @@ export function NavBarComponent() {
     };
 
     return (
-        <div className="lg:hidden block">
+        <div>
             <button onClick={() => handleToggleMenu(true)}>
                 <CgMenuRight className="text-3xl md:text-2xl text-gray-500" />
             </button>
