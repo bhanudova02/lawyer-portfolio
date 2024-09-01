@@ -39,7 +39,7 @@ function App() {
       <FAQ />
       <FeedBack />
       <ContactUs />
-      {/* <Footer /> */}
+      <Footer />
     </main>
   )
 }
