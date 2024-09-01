@@ -1,3 +1,9 @@
+import React from 'react';
+import 'aos/dist/aos.css'; // Import AOS CSS
+import AOS from 'aos';
+
+AOS.init({ once: true }); // Initialize AOS
+
 export default function Experience() {
     return (
         <div className="py-20">
