@@ -4,8 +4,11 @@ import Header from './components/Header'
 
 import { Carousel } from './components/Carousel';
 import { ContactUs } from './components/ContactUs';
-import { Example } from './components/Example';
+import { FeedBack } from './components/FeedBack';
 import { Footer } from './components/Footer';
+import { FAQ } from './components/FAQ';
+import { WhyChooseUs } from './components/WhyChooseUs';
+import { Services } from './components/Services';
 
 function App() {
 
@@ -15,7 +18,10 @@ function App() {
       <Header />
       <Carousel />
       <Experience />
-      <Example />
+      <WhyChooseUs/>
+      <Services/>
+      <FAQ/>
+      <FeedBack />
       <ContactUs />
       <Footer />
     </main>

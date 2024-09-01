@@ -3,10 +3,10 @@ import { FaBriefcase, FaShieldAlt, FaRegHandshake } from 'react-icons/fa';
 
 export function Carousel() {
     return (
-        <div className="relative w-full h-[70vh] md:h-[60vh] lg:h-screen overflow-hidden">
+        <div className="relative w-full h-[80vh] md:h-[60vh] lg:h-screen overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-[#101212] to-[#08201D]">
                 {/* Uncomment the image if you need it instead of video */}
-                <img src="/home_banner5.jpg" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+                <img src="/home_banner1.jpg" className="absolute inset-0 w-full h-full object-cover opacity-30" />
                 <section className="relative flex flex-col justify-center h-full pt-12 pb-8 sm:pt-20 sm:pb-12 lg:pt-24 lg:pb-24">
                     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 relative z-20">
                         <div className="max-w-4xl mx-auto text-center">
