@@ -9,15 +9,15 @@ export function Carousel() {
                 <section className="relative flex flex-col justify-center h-full pt-12 pb-8 sm:pt-20 sm:pb-12 lg:pt-24 lg:pb-24">
                     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 relative z-20">
                         <div className="max-w-4xl mx-auto text-center">
-                            <h1 data-aos="fade-up" data-aos-anchor-placement="top-center" className="text-3xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">
+                            <h1 data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="300" data-aos-duration="1000" className="text-3xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-white">
                                     Trusted Legal Expertise for Your Future
                                 </span>
                             </h1>
-                            <p data-aos="fade-up" data-aos-delay="200" data-aos-anchor-placement="top-center" className="mt-4 text-sm text-white sm:text-base md:text-lg lg:text-xl">
+                            <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" data-aos-anchor-placement="top-center" className="mt-4 text-sm text-white sm:text-base md:text-lg lg:text-xl">
                                 With decades of experience, we offer expert legal services to protect your rights and secure your interests.
                             </p>
-                            <div data-aos="flip-up" data-aos-delay="400" data-aos-anchor-placement="top-center">
+                            <div data-aos="flip-up" data-aos-delay="700" data-aos-duration="1000" data-aos-anchor-placement="top-center">
                                 <button className="inline-flex items-center px-4 py-3 mt-6 font-semibold text-white transition-all duration-200 bg-green-500 rounded-lg sm:mt-8 sm:px-6 sm:py-4 md:px-8 md:py-5 md:text-base hover:bg-green-600 focus:bg-green-600">
                                     Schedule a Consultation
                                     <svg
@@ -38,21 +38,21 @@ export function Carousel() {
                             </div>
 
                             <div className="grid grid-cols-1 gap-4 mt-8 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 md:gap-8">
-                                <div data-aos="fade-right" data-aos-delay="100" data-aos-anchor-placement="top-center" className="flex items-center justify-center text-left">
+                                <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000" data-aos-anchor-placement="top-center" className="flex items-center justify-center text-left">
                                     <FaBriefcase className="text-green-400 w-6 h-6 sm:w-8 sm:h-8" />
                                     <p className="ml-2 text-xs text-white sm:text-sm md:text-base">
                                         Experienced in handling complex legal cases
                                     </p>
                                 </div>
 
-                                <div data-aos="fade-right" data-aos-delay="300" data-aos-anchor-placement="top-center" className="flex items-center justify-center text-left">
+                                <div data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" data-aos-anchor-placement="top-center" className="flex items-center justify-center text-left">
                                     <FaShieldAlt className="text-green-400 w-6 h-6 sm:w-8 sm:h-8" />
                                     <p className="ml-2 text-xs text-white sm:text-sm md:text-base">
                                         No hidden fees, transparent services
                                     </p>
                                 </div>
 
-                                <div data-aos="fade-right" data-aos-delay="500" data-aos-anchor-placement="top-center" className="flex items-center justify-center text-left">
+                                <div data-aos="fade-right" data-aos-delay="700" data-aos-duration="1000" data-aos-anchor-placement="top-center" className="flex items-center justify-center text-left">
                                     <FaRegHandshake className="text-green-400 w-6 h-6 sm:w-8 sm:h-8" />
                                     <p className="ml-2 text-xs text-white sm:text-sm md:text-base">
                                         Comprehensive legal support from start to finish
