@@ -19,24 +19,20 @@ export function SignUpComponent() {
     if (uname !== "" && email !== "") {
       if (uname.length >= 4) {
         if (uname.match(usernameRegex)) {
-          if (email.match(emailRegex)) {
-            setLoading(true); // Set loading to true when starting the request
-            try {
-              await axios({
-                method: "post",
-                url: "https://videosubmission-backend-1.onrender.com/auth/user/signup",
-                data: { name: uname, email: email },
-              }).then((res) => {
-                console.log(res.data)
-              });
-              navigate("/verify_signup");
-            } catch (err) {
-              setError(err.response?.data?.message || 'Signup failed');
-            } finally {
-              setLoading(false); // Set loading to false when request is completed
-            }
-          } else {
-            setError("Please provide a valid Gmail address");
+          setLoading(true); // Set loading to true when starting the request
+          try {
+            await axios({
+              method: "post",
+              url: "https://videosubmission-backend-1.onrender.com/auth/user/signup",
+              data: { name: uname, email: email },
+            }).then((res) => {
+              console.log(res.data)
+            });
+            navigate("/verify_signup");
+          } catch (err) {
+            setError(err.response?.data?.message || 'Signup failed');
+          } finally {
+            setLoading(false); // Set loading to false when request is completed
           }
         } else {
           setError("Username's first 4 characters must be letters");
@@ -56,7 +52,7 @@ export function SignUpComponent() {
         <LoadingSpinner /> // Show the loading spinner when loading is true
       ) : (
         <div>
-          <NormalHeader/>
+          <NormalHeader />
           <div className="bg-white py-20">
             <div className="w-[90%] md:w-[30%] mx-auto shadow-md p-10">
               <div className="text-center mb-4">
@@ -78,7 +74,7 @@ export function SignUpComponent() {
                       type="email" required
                       onChange={(e) => setEmail(e.target.value)}
                       className="border focus:outline-none p-2 w-full font-medium rounded-md placeholder:text-sm"
-                      placeholder="Email"
+                      placeholder="Email or Phone"
                     />
                   </dd>
                 </dl>

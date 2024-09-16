@@ -61,7 +61,7 @@ export function LoginComponent() {
                         <div>
                             <dl className="space-y-3">
                                 <dd>
-                                    <input type="email" onChange={(e) => { setEmail(e.target.value) }} className="border focus:outline-none p-2 w-full font-medium rounded-md placeholder:text-sm" placeholder="Enter Email Address" />
+                                    <input type="email" onChange={(e) => { setEmail(e.target.value) }} className="border focus:outline-none p-2 w-full font-medium rounded-md placeholder:text-sm" placeholder="Enter Email / Mobile" />
                                 </dd>
                                 <dd>
                                     <input type="password" onChange={(e) => { setPassword(e.target.value) }} className="border focus:outline-none p-2 w-full font-medium rounded-md placeholder:text-sm" placeholder="Enter Password" />
