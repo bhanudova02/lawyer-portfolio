@@ -74,7 +74,7 @@ export function VerifySignUp() {
                       onChange={(e) => setEmail(e.target.value)}
                       onKeyDown={handleKeyDown}
                       className="border focus:outline-none p-2 w-full font-medium rounded-md placeholder:text-sm"
-                      placeholder="Enter Email Address"
+                      placeholder="Enter Email/Phone"
                     />
                   </dd>
                   <dd>
