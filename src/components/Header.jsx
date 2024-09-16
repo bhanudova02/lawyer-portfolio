@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavBarComponent } from './NavBarComponent';
+import { Link, useLocation } from "react-router-dom";
+import { useCookies } from "react-cookie";
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -19,19 +21,54 @@ export default function Header() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const location = useLocation();
+    const [cookies, setCookie, removeCookie] = useCookies();
+    function isActive(path) {
+        return location.pathname === path ? 'relative after:absolute after:w-[60%] after:h-[2px] after:bg-green-400 after:left-0 after:bottom-[-3px]' : '';
+    }
+
+
+    function LoginButton() {
+        return (
+            <Link to="login" className=" bg-green-500 px-6 rounded text-white py-1 font-semibold">
+                Login
+            </Link>
+        )
+    }
+    function LogoutButton() {
+        const handleLogout = (e) => {
+            removeCookie("tokenId");
+            refreshPage();
+        };
+
+        return (
+            <div onClick={handleLogout} className="bg-orange-500 px-6 rounded text-white py-1 font-semibold" >
+                Logout
+            </div>
+        );
+    }
+    function refreshPage() {
+        window.location.reload(); // This refreshes the page
+    }
+
     return (
         <header
             className={`fixed top-0 z-50 w-full px-6 py-3 transition-all duration-500 ${isScrolled ? 'bg-white text-black animate-slide-down shadow shadow-green-500/20' : 'bg-gray-200/5 text-white'}`}
         >
             <div className='flex justify-between'>
                 <div data-aos="zoom-in" data-aos-delay="500" data-aos-anchor-placement="top-center" >
-                    <img src={logo} alt="Logo" className="w-48 md:w-52 h-auto" />
+                    <Link to="/">
+                        <img src={logo} alt="Logo" className="w-48 md:w-52 h-auto" />
+                    </Link>
                 </div>
                 <ul data-aos="zoom-in" data-aos-delay="800" className="hidden md:flex items-center gap-8 font-semibold">
                     <li>About</li>
                     <li>Services</li>
                     <li>Feedback</li>
                     <li>Contact Us</li>
+                    <button>
+                        {cookies.tokenId == undefined ? <LoginButton /> : <LogoutButton />}
+                    </button>
                 </ul>
                 <div className='md:hidden block'>
                     <NavBarComponent />
