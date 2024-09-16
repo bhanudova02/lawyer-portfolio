@@ -17,28 +17,24 @@ export function VerifySignUp() {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
 
     if (Email !== "" && Otp !== "" && Password !== "") {
-      if (Email.match(emailRegex)) {
-        if (Password.length > 6) {
-          setLoading(true); // Set loading to true when starting the request
-          try {
-            await axios.post("https://videosubmission-backend-1.onrender.com/auth/user/verify", {
-              email: Email,
-              otp: Otp,
-              password: Password,
-            }).then((res) => {
-              console.log(res.data)
-            });
-            navigate("/login");
-          } catch (err) {
-            setErrors(err.response?.data?.message || 'Verification failed');
-          } finally {
-            setLoading(false); // Set loading to false when request is completed
-          }
-        } else {
-          setErrors("Password must be at least 6 characters");
+      if (Password.length > 6) {
+        setLoading(true); // Set loading to true when starting the request
+        try {
+          await axios.post("https://videosubmission-backend-1.onrender.com/auth/user/verify", {
+            email: Email,
+            otp: Otp,
+            password: Password,
+          }).then((res) => {
+            console.log(res.data)
+          });
+          navigate("/login");
+        } catch (err) {
+          setErrors(err.response?.data?.message || 'Verification failed');
+        } finally {
+          setLoading(false); // Set loading to false when request is completed
         }
       } else {
-        setErrors("Please provide a valid Gmail address");
+        setErrors("Password must be at least 6 characters");
       }
     } else {
       setErrors("Please fill in all the details");
@@ -58,7 +54,7 @@ export function VerifySignUp() {
         <LoadingSpinner />
       ) : (
         <div>
-          <NormalHeader/>
+          <NormalHeader />
           <div className="bg-white py-20">
             <div className="w-[90%] md:w-[30%] mx-auto shadow-md p-10">
               <div className="text-center mb-4">
