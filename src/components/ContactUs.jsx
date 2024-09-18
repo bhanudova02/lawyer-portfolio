@@ -88,8 +88,8 @@ export function ContactUs() {
 
                                         <div 
                                             data-aos="fade-up"
-                                            data-aos-delay="600"
-                                            data-aos-duration="1000"
+                                            data-aos-delay="400"
+                                            data-aos-duration="600"
                                         >
                                             <label htmlFor="company" className="text-base font-medium text-gray-900">Company Name (if applicable)</label>
                                             <div className="mt-2.5 relative">
@@ -118,8 +118,8 @@ export function ContactUs() {
                                             <button
                                                 type="submit"
                                                 data-aos="fade-up"
-                                                data-aos-delay="800"
-                                                data-aos-duration="1000"
+                                                data-aos-delay="400"
+                                                data-aos-duration="400"
                                                 className="inline-flex items-center justify-center w-full px-6 py-4 text-base font-semibold text-white bg-blue-600 rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
                                             >
                                                 Send Message

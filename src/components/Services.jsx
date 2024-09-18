@@ -1,88 +1,63 @@
-import { Button } from "@/components/ui/button";
+import { FaBalanceScale, FaGavel, FaFileContract, FaSearch } from 'react-icons/fa';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // Import AOS CSS
-import React, { useState } from 'react';
-import { FaUpload, FaSpinner } from 'react-icons/fa';
-
-// Initialize AOS
+import 'aos/dist/aos.css';
 AOS.init({ once: true });
-
+const ServiceCard = ({ icon: Icon, title, description }) => (
+    <div className="bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl" data-aos="fade-up" data-aos-duration="1000">
+        <Icon className="text-4xl text-blue-600 mb-4" />
+        <h3 className="text-xl font-semibold mb-2">{title}</h3>
+        <p className="text-gray-600">{description}</p>
+    </div>
+);
 export function Services() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        message: '',
-        attachment: null
-    });
-    const [errors, setErrors] = useState({});
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSuccess, setIsSuccess] = useState(false);
-
-    const validateEmail = (email) => {
-        const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        return re.test(String(email).toLowerCase());
-    };
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-
-        if (name === 'email') {
-            setErrors({
-                ...errors,
-                email: validateEmail(value) ? '' : 'Please enter a valid email address'
-            });
+    const services = [
+        {
+            icon: FaBalanceScale,
+            title: 'Legal Consultation',
+            description: 'Expert advice tailored to your specific legal needs.'
+        },
+        {
+            icon: FaGavel,
+            title: 'Litigation',
+            description: 'Skilled representation in court for various legal matters.'
+        },
+        {
+            icon: FaFileContract,
+            title: 'Contract Drafting',
+            description: 'Precise and comprehensive contract creation and review.'
+        },
+        {
+            icon: FaSearch,
+            title: 'Legal Research',
+            description: 'In-depth research to support your case with relevant laws and precedents.'
         }
-    };
-
-    const handleFileChange = (e) => {
-        setFormData({ ...formData, attachment: e.target.files[0] });
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-
-        // Validate all fields
-        let newErrors = {};
-        if (!formData.name) newErrors.name = 'Name is required';
-        if (!formData.email) newErrors.email = 'Email is required';
-        if (!validateEmail(formData.email)) newErrors.email = 'Please enter a valid email address';
-        if (!formData.phone) newErrors.phone = 'Phone number is required';
-        if (!formData.message) newErrors.message = 'Message is required';
-
-        if (Object.keys(newErrors).length > 0) {
-            setErrors(newErrors);
-            setIsSubmitting(false);
-            return;
-        }
-
-        // Simulating form submission
-        setTimeout(() => {
-            setIsSubmitting(false);
-            setIsSuccess(true);
-            setFormData({ name: '', email: '', phone: '', message: '', attachment: null });
-            setTimeout(() => setIsSuccess(false), 5000);
-        }, 2000);
-    };
-
-    const commonInputClasses = 'w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400';
-    const errorInputClasses = 'border-red-500 focus:ring-red-400';
-
+    ];
 
     return (
         <div className="bg-slate-200  text-black py-20">
             <div className="w-[90%] md:w-[80%] lg:max-w-6xl mx-auto">
-
-                <div className="mb-10 space-y-3" data-aos="fade-up" data-aos-duration="1000">
-                    <h1 className="text-3xl md:text-4xl font-bold text-center">Our Legal Services</h1>
-                    <p className="text-lg font-medium text-center leading-relaxed">
-                        Our legal team offers personalized consultation, expert litigation, meticulous contract drafting, and thorough legal research. We ensure that your legal needs are met with clarity, precision, and unwavering dedication, empowering you to make informed decisions and safeguard your interests.
+                <div className="mb-16 space-y-4" data-aos="fade-up" data-aos-duration="1000">
+                    <h1 className="text-4xl font-bold text-center text-blue-600">Our Legal Services</h1>
+                    <p className="text-lg font-medium text-center leading-relaxed max-w-3xl mx-auto">
+                        Our expert legal team offers personalized solutions to empower your decisions and protect your interests.
                     </p>
                 </div>
-
-             
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                    {services.map((service, index) => (
+                        <ServiceCard key={index} {...service} />
+                    ))}
+                </div>
+                <div className="mt-16 bg-blue-600 text-white rounded-lg p-8 shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+                    <h2 className="text-3xl font-bold text-center mb-4">Ready to Get Started?</h2>
+                    <p className="text-lg text-center mb-6">
+                        Contact us today for a free initial consultation and take the first step towards resolving your legal matters.
+                    </p>
+                    <div className="flex justify-center">
+                        <button className="bg-white text-blue-600 font-semibold py-3 px-6 rounded-full hover:bg-blue-100 transition duration-300">
+                            Schedule Consultation
+                        </button>
+                    </div>
+                </div>
             </div>
         </div >
     );
