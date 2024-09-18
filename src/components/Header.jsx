@@ -28,28 +28,6 @@ export default function Header() {
     }
 
 
-    function LoginButton() {
-        return (
-            <Link to="login" className=" bg-green-500 px-6 rounded text-white py-1 font-semibold">
-                Login
-            </Link>
-        )
-    }
-    function LogoutButton() {
-        const handleLogout = (e) => {
-            removeCookie("tokenId");
-            refreshPage();
-        };
-
-        return (
-            <div onClick={handleLogout} className="bg-orange-500 px-6 rounded text-white py-1 font-semibold" >
-                Logout
-            </div>
-        );
-    }
-    function refreshPage() {
-        window.location.reload(); // This refreshes the page
-    }
 
     return (
         <header
@@ -66,9 +44,6 @@ export default function Header() {
                     <li>Services</li>
                     <li>Feedback</li>
                     <li>Contact Us</li>
-                    <button>
-                        {cookies.tokenId == undefined ? <LoginButton /> : <LogoutButton />}
-                    </button>
                 </ul>
                 <div className='md:hidden block'>
                     <NavBarComponent />

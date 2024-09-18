@@ -1,7 +1,7 @@
 import { FaWhatsapp } from 'react-icons/fa';
 
 export function WhatsApp() {
-    const phoneNumber = '+918519911007'; // Replace with your WhatsApp phone number in international format
+    const phoneNumber = '+916302715653'; // Replace with your WhatsApp phone number in international format
     const message = 'Hello, I would like to chat with you!'; // Optional initial message
 
     return (
