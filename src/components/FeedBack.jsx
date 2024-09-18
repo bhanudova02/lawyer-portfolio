@@ -106,7 +106,7 @@ export function FeedBack() {
                         )}
 
                         {showModal && (
-                            <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+                            <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-90">
                                 <div className="bg-white px-4 text-center py-6 rounded-lg shadow-md relative w-[80%] md:w-[40%] lg:w-[25%]">
                                     <h2 className="text-lg font-bold ">Your Feedback Sent Successfully </h2>
                                     <p className='text-md '>
