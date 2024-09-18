@@ -1,16 +1,25 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS CSS
-
+import { useState } from 'react';
 // Initialize AOS
 AOS.init({ once: true });
-
 export function FeedBack() {
+    const [feedback, setFeedBack] = useState({
+        Email: '',
+        Feedback_Description: ""
+    });
+
+    function handelSubmit() {
+        alert(`Email: ${feedback.Email}\nFeedback: ${feedback.Feedback_Description}`);
+    }
+
+    
     return (
         <section className="py-10 bg-[#ECEFF4] sm:py-16 lg:py-24">
             <div className="w-[90%] md:w-[80%] lg:max-w-6xl mx-auto space-y-10">
                 <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                     <div className="grid lg:grid-cols-2 grid-cols-1 gap-12">
-                        <div 
+                        <div
                             data-aos="fade-up"
                             data-aos-duration="1000"
                             className="space-y-6"
@@ -18,7 +27,7 @@ export function FeedBack() {
                             <h2 className="text-3xl font-bold leading-tight text-black sm:text-3xl lg:text-4xl">
                                 Share Your Feedback
                             </h2>
-                            <p 
+                            <p
                                 data-aos="fade-up"
                                 data-aos-delay="200"
                                 data-aos-duration="1000"
@@ -27,8 +36,8 @@ export function FeedBack() {
                                 We value your feedback and are always striving to improve our legal services. Please let us know about your experience with our firm, and how we can better assist you in the future.
                             </p>
 
-                            <form className="space-y-4">
-                                <div 
+                            <div className="space-y-4">
+                                <div
                                     data-aos="fade-up"
                                     data-aos-delay="400"
                                     data-aos-duration="1000"
@@ -37,6 +46,12 @@ export function FeedBack() {
                                         Email Address
                                     </label>
                                     <input
+                                        onChange={(e) => {
+                                            setFeedBack({
+                                                Email: e.target.value,
+                                                Feedback_Description: feedback.Feedback_Description
+                                            })
+                                        }}
                                         type="email"
                                         id="email"
                                         placeholder="Your email address"
@@ -44,7 +59,7 @@ export function FeedBack() {
                                     />
                                 </div>
 
-                                <div 
+                                <div
                                     data-aos="fade-up"
                                     data-aos-delay="500"
                                     data-aos-duration="1000"
@@ -53,6 +68,12 @@ export function FeedBack() {
                                         Feedback
                                     </label>
                                     <textarea
+                                        onChange={(e) => {
+                                            setFeedBack({
+                                                Email: feedback.Email,
+                                                Feedback_Description: e.target.value
+                                            })
+                                        }}
                                         id="feedback"
                                         rows="4"
                                         placeholder="Your feedback here"
@@ -61,7 +82,7 @@ export function FeedBack() {
                                 </div>
 
                                 <button
-                                    type="submit"
+                                    onClick={handelSubmit}
                                     data-aos="zoom-in"
                                     data-aos-delay="600"
                                     data-aos-duration="1000"
@@ -69,10 +90,10 @@ export function FeedBack() {
                                 >
                                     Submit Feedback
                                 </button>
-                            </form>
+                            </div>
                         </div>
 
-                        <div 
+                        <div
                             data-aos="zoom-in"
                             data-aos-duration="1000"
                             className="relative"
