@@ -34,13 +34,21 @@ function App() {
     <main>
       <Header />
       <Carousel />
+      <section id="about">
+        <Experience />
+        <WhyChooseUs />
+      </section>
+      <section id="services">
+        <Services />
+        <FAQ />
+      </section>
+      <section id="feedback">
+        <FeedBack />
+      </section>
+      <section id="contact-us">
+        <ContactUs />
+      </section>
       <WhatsApp />
-      <Experience />
-      <WhyChooseUs />
-      <Services />
-      <FAQ />
-      <FeedBack />
-      <ContactUs />
       <Footer />
     </main>
   )

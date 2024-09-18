@@ -6,3 +6,11 @@
     --radius: 0.5rem
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.no-scroll {
+    overflow: hidden;
+}

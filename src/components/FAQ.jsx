@@ -37,7 +37,7 @@ export function FAQ() {
                             <AccordionTrigger
                                 data-aos="fade-right"
                                 data-aos-delay="500"
-                                className="text-xl text-start"
+                                className="text-sm md:text-xl text-start"
                             >
                                 What services do you offer?
                             </AccordionTrigger>
@@ -49,7 +49,7 @@ export function FAQ() {
                             <AccordionTrigger
                                 data-aos="fade-right"
                                 data-aos-delay="600"
-                                className="text-xl text-start"
+                                className="text-sm md:text-xl text-start"
                             >
                                 How do you charge for your services?
                             </AccordionTrigger>
@@ -61,7 +61,7 @@ export function FAQ() {
                             <AccordionTrigger
                                 data-aos="fade-right"
                                 data-aos-delay="700"
-                                className="text-xl text-start"
+                                className="text-sm md:text-xl text-start"
                             >
                                 Can you represent me in court?
                             </AccordionTrigger>
@@ -73,7 +73,7 @@ export function FAQ() {
                             <AccordionTrigger
                                 data-aos="fade-right"
                                 data-aos-delay="800"
-                                className="text-xl text-start"
+                                className="text-sm md:text-xl text-start"
                             >
                                 Do you offer free consultations?
                             </AccordionTrigger>
@@ -85,7 +85,7 @@ export function FAQ() {
                             <AccordionTrigger
                                 data-aos="fade-right"
                                 data-aos-delay="900"
-                                className="text-xl text-start"
+                                className="text-sm md:text-xl text-start"
                             >
                                 What areas do you serve?
                             </AccordionTrigger>

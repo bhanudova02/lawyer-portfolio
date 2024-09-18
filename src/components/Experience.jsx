@@ -6,7 +6,7 @@ AOS.init({ once: true }); // Initialize AOS
 
 export default function Experience() {
     return (
-        <div className="py-20">
+        <div className="py-20" id="about">
             <div className="w-[90%] md:w-[80%] lg:max-w-6xl mx-auto space-y-10">
                 <div className="flex flex-col lg:flex-row">
                     <div data-aos="fade-up" data-aos-delay="200" className="w-full lg:w-[40%] relative">

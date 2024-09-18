@@ -38,21 +38,21 @@ export function Carousel() {
                             </div>
 
                             <div className="grid grid-cols-1 gap-4 mt-8 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 md:gap-8">
-                                <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000" data-aos-anchor-placement="top-center" className="flex items-center justify-center text-left">
+                                <div data-aos="fade-right" data-aos-delay="300"  className="flex items-center justify-center text-left">
                                     <FaBriefcase className="text-green-400 w-6 h-6 sm:w-8 sm:h-8" />
                                     <p className="ml-2 text-xs text-white sm:text-sm md:text-base">
                                         Experienced in handling complex legal cases
                                     </p>
                                 </div>
 
-                                <div data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" data-aos-anchor-placement="top-center" className="flex items-center justify-center text-left">
+                                <div data-aos="fade-right" data-aos-delay="500" className="flex items-center justify-center text-left">
                                     <FaShieldAlt className="text-green-400 w-6 h-6 sm:w-8 sm:h-8" />
                                     <p className="ml-2 text-xs text-white sm:text-sm md:text-base">
                                         No hidden fees, transparent services
                                     </p>
                                 </div>
 
-                                <div data-aos="fade-right" data-aos-delay="700" data-aos-duration="1000" data-aos-anchor-placement="top-center" className="flex items-center justify-center text-left">
+                                <div data-aos="fade-right" data-aos-delay="700"  className="flex items-center justify-center text-left">
                                     <FaRegHandshake className="text-green-400 w-6 h-6 sm:w-8 sm:h-8" />
                                     <p className="ml-2 text-xs text-white sm:text-sm md:text-base">
                                         Comprehensive legal support from start to finish
