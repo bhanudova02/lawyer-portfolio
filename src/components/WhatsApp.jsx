@@ -6,8 +6,8 @@ export function WhatsApp() {
 
     return (
         <a
-            href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
-            target="_blank"
+            href={`/`}
+            
             rel="noopener noreferrer"
             className="fixed bottom-4 right-4 bg-green-500 p-3 rounded-full shadow-lg flex items-center space-x-2 cursor-pointer z-50 hover:bg-green-600 transition-colors duration-300"
         >
