@@ -47,7 +47,7 @@ export function NavBarComponent() {
                     {/* Logo */}
                     <div className="absolute left-3 top-6">
                         <Link to="/" className="flex items-center">
-                            <img src="/white_logo.png" alt="Logo" className="w-20 md:w-20 h-auto" />
+                            <img src="/white_logo.png" alt="Logo" className="w-16 md:w-20 h-auto" />
                         </Link>
                     </div>
 
