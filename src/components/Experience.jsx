@@ -21,7 +21,7 @@ export default function Experience() {
                                 <h6 data-aos="fade-up" data-aos-delay="600" className="font-semibold text-2xl">Learn About Us</h6>
                                 <h2 data-aos="fade-up" data-aos-delay="800" className="text-3xl md:text-5xl font-bold mt-1">We Provide Reliable And Effective Legal Services</h2>
                                 <p data-aos="fade-up" data-aos-delay="1000" className="text-lg mt-4">
-                                    With 16 years of experience, Santhosh Kumar provides the foundation you can trust. Specializing in delivering reliable and effective legal services, Santhosh ensures that your rights are defended with precision and care. His team is committed to offering personalized legal solutions, guiding you through every step of the legal process with integrity and dedication. When you choose Santhosh Kumar, you're not just getting a lawyer; you're gaining a trusted advocate for your cause.
+                                    With 16 years of experience, John Doe provides the foundation you can trust. Specializing in delivering reliable and effective legal services, John Doe that your rights are defended with precision and care. His team is committed to offering personalized legal solutions, guiding you through every step of the legal process with integrity and dedication. When you choose John Doe, you're not just getting a lawyer; you're gaining a trusted advocate for your cause.
                                 </p>
                             </div>
                         </div>

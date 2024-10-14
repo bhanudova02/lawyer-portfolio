@@ -36,7 +36,7 @@ export default function Header() {
       <div className='flex justify-between'>
         <div data-aos="zoom-in" data-aos-delay="500" data-aos-anchor-placement="top-center" >
           <Link to="/">
-            <img src={logo} alt="Logo" className="w-48 md:w-52 h-auto" />
+            <img src={logo} alt="Logo" className="w-10 md:w-14 h-auto" />
           </Link>
         </div>
         <ul data-aos="zoom-in" data-aos-delay="800" className="hidden md:flex items-center gap-8 font-semibold">
