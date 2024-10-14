@@ -4,8 +4,14 @@ export function WhatsApp() {
     const phoneNumber = '+916302715653'; // Replace with your WhatsApp phone number in international format
     const message = 'Hello, I would like to chat with you!'; // Optional initial message
 
+    const handleClick = () => {
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+    };
+
     return (
         <div
+            onClick={handleClick}
             className="fixed bottom-4 right-4 bg-green-500 p-3 rounded-full shadow-lg flex items-center space-x-2 cursor-pointer z-50 hover:bg-green-600 transition-colors duration-300"
         >
             <FaWhatsapp className="text-white text-2xl" />
